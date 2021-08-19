@@ -132,9 +132,9 @@ comments.drop(columns=['website','school'], inplace=True)
 #note below info is placeholder/for demonstration purposes (not real). 
 
 engine = create_engine("mysql+pymysql://{user}:{pw}@localhost/{db}"
-                        .format(user='root',
-                                pw='12345',
-                                db='coding_schools'))
+                        .format(user='',
+                                pw='',
+                                db=''))
 
 badges.to_sql('badges',con=engine,if_exists='replace',index = False,chunksize=1000)
 schools.to_sql('schools',con=engine,if_exists='replace',index = False,chunksize=1000)
